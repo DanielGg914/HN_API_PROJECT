@@ -1,0 +1,30 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.search-form {
+    // display: block;
+    width: 100%;
+    margin:2%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: $primary-9;
+    border: 1px solid #000;
+  h2 {
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+  }
+  .form-input {
+    // background: $white;
+    padding: 0.1rem 1rem;
+    border-bottom: 5px solid $secondary-4;
+    width: 15rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+  }
+}
