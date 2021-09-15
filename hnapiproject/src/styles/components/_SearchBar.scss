@@ -5,13 +5,14 @@
 .search-form {
     // display: block;
     width: 100%;
-    margin:2%;
+    padding:1%;
     position: fixed;
-    left: 0;
-    right: 0;
+    // left: 0;
+    // right: 0;
     top: 0;
-    background-color: $primary-9;
-    border: 1px solid #000;
+    background-color: $primary-2;
+    // border: 1px solid #000;
+    box-shadow: $light-shadow;
   h2 {
     text-align: center;
     margin: auto;
@@ -20,8 +21,8 @@
   .form-input {
     // background: $white;
     padding: 0.1rem 1rem;
-    border-bottom: 5px solid $secondary-4;
-    width: 15rem;
+    border-bottom: 5px solid $secondary-6;
+    width: 25rem;
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -1,20 +1,16 @@
 import SearchBar from './components/SearchBar';
-import Widget from './components/Widget';
+import Headings from './components/Headings';
 
 function App() {
   return (
     <div className="App">
         <SearchBar />
   
-        <Widget />
-
-
+        <Headings />
     </div>
   );
 }
 
-// -useReducer --
-// - useContext -- 
 // - useFetch -- 
 // - nice styles
 // - pagination (the next and prev functionality)

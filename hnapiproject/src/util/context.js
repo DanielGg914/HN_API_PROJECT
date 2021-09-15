@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, useContext } from "react";
+import React, { useReducer, useEffect, useContext, useState } from "react";
 import { reducer } from "./reducer";
 const API_ENDPOINT = `https://hn.algolia.com/api/v1/search?${process.env.REACT_APP_NEWS_API_KEY}&`;
 
@@ -14,6 +14,7 @@ const HeadingContext = React.createContext();
 
 export const HeadingProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [search, setSearch] = useState('')
 
   const fetchHeading = async (url) => {
     dispatch({ type: 'SET_LOADING' });
@@ -34,8 +35,9 @@ export const HeadingProvider = ({ children }) => {
     fetchHeading(`${API_ENDPOINT}query=${state.query}&page=${state.page}`);
   }, [state.query, state.page]);
 
+
   return (
-    <HeadingContext.Provider value={{ ...state, handleSearch }}>
+    <HeadingContext.Provider value={{ ...state, handleSearch, search, setSearch }}>
       {children}
     </HeadingContext.Provider>
   );
