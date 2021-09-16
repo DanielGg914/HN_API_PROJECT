@@ -34,7 +34,7 @@ export const HeadingProvider = ({ children }) => {
   }
 
   const handlePage = (value) => {
-    dispatch({type: 'HANDLE_PAGE', payload: query})
+    dispatch({type: 'HANDLE_PAGE', payload: value})
   }
 
   useEffect(() => {

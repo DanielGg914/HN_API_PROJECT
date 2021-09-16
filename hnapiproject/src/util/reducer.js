@@ -23,11 +23,11 @@ export const reducer = (state, action) => {
         }
 
         return { ...state, page: newPage };
-        
+
       } else if (action.payload === "dec") {
         let newPage = state.page - 1;
-        if (newPage < state.nbPage) {
-          newPage = state.nbPage - 1;
+        if (newPage < 0) {
+          newPage = state.nbPages - 1;
         }
 
         return { ...state, page: newPage };

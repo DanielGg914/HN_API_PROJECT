@@ -2,7 +2,7 @@ import React from "react";
 import { useHeadingContext } from "../util/context.js";
 
 const SearchBar = () => {
-  const { query, handleSearch, nbPages, page, handlePage } = useHeadingContext();
+  const { query, handleSearch, nbPages, page, handlePage, loading } = useHeadingContext();
 
   return (
     <form onSubmit={(e) => e.preventDefault()} className="search-form">
@@ -17,7 +17,7 @@ const SearchBar = () => {
       </div>
 
       <div className="info">
-        <button className="prev-page">Prev Page</button>
+      <button disabled={loading} onClick={()=> handlePage('dec')} className="prev-page">Next Page</button>
 
 
         <h3 className="page-num">
