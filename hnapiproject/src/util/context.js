@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect, useContext, useState } from "react";
 import { reducer } from "./reducer";
-const API_ENDPOINT = `https://hn.algolia.com/api/v1/search?${process.env.REACT_APP_NEWS_API_KEY}&`;
+const API_ENDPOINT = `https://hn.algolia.com/api/v1/search?`;
 
 const initialState = {
   loading: true,
@@ -14,12 +14,14 @@ const HeadingContext = React.createContext();
 
 export const HeadingProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [search, setSearch] = useState('')
+  // const [search, setSearch] = useState('')
 
   const fetchHeading = async (url) => {
     dispatch({ type: 'SET_LOADING' });
+    console.log(url);
     try {
       const response = await fetch(url);
+      // console.log(response.json());
       const data = await response.json();
       dispatch({type: 'SET_HITS', payload: data})
     } catch (error) {
@@ -31,13 +33,17 @@ export const HeadingProvider = ({ children }) => {
       dispatch({type: 'HANDLE_SEARCH', payload: query})
   }
 
+  const handlePage = (value) => {
+    dispatch({type: 'HANDLE_PAGE', payload: query})
+  }
+
   useEffect(() => {
     fetchHeading(`${API_ENDPOINT}query=${state.query}&page=${state.page}`);
   }, [state.query, state.page]);
 
 
   return (
-    <HeadingContext.Provider value={{ ...state, handleSearch, search, setSearch }}>
+    <HeadingContext.Provider value={{ ...state, handleSearch, handlePage }}>
       {children}
     </HeadingContext.Provider>
   );

@@ -3,29 +3,58 @@
 @use '../util/mixins' as *;
 
 .search-form {
-    // display: block;
-    width: 100%;
-    padding:1%;
-    position: fixed;
-    // left: 0;
-    // right: 0;
-    top: 0;
-    background-color: $primary-2;
-    // border: 1px solid #000;
-    box-shadow: $light-shadow;
-  h2 {
-    text-align: center;
-    margin: auto;
-    font-weight: bold;
+  z-index: 3;
+  width: 100%;
+  padding: 1%;
+  position: fixed;
+  top: 0;
+  box-shadow: $dark-shadow;
+  background-color: $primary-2;
+  .search {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    h2 {
+      text-align: center;
+      margin: auto;
+      font-weight: bold;
+    }
+    .form-input {
+      // background: $white;
+      padding: 0.1rem 1rem;
+      border-bottom: 5px solid $secondary-6;
+      width: 25rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      outline: none;
+    }
   }
-  .form-input {
-    // background: $white;
-    padding: 0.1rem 1rem;
-    border-bottom: 5px solid $secondary-6;
-    width: 25rem;
-    display: block;
+
+  //information such as the page number and the previus and next buttons
+  .info {
+    float: left;
+    width: 50%;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    outline: none;
+    h3 {
+      color: $white;
+      left: 0;
+      right: 0;
+      display: inline-block;
+    }
+    .prev-page {
+      background-color: $secondary-8;
+      display: inline-block;
+
+    }
+
+    .next-page {
+      background-color: $secondary-6;
+      display: inline-block;
+      padding: .7rem;
+      border-radius: 20%;
+    }
   }
 }

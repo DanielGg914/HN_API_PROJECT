@@ -1,20 +1,37 @@
 export const reducer = (state, action) => {
   switch (action.type) {
-    case 'SET_LOADING':
+    case "SET_LOADING":
       return { ...state, loading: true };
-    case 'SET_HITS':
+    case "SET_HITS":
       return {
         ...state,
         loading: false,
-        hit: action.payload.hit,
-        nbpages: action.payload.nbpages,
+        hits: action.payload.hits,
+        nbPages: action.payload.nbPages,
       };
-      case 'HANDLE_SEARCH':
-        return {
-          ...state,
-          loading: true,
-          
+    case "HANDLE_SEARCH":
+      return {
+        ...state,
+        page: 0,
+        query: action.payload,
+      };
+    case "HANDLE_PAGE":
+      if (action.payload === "inc") {
+        let newPage = state.page + 1;
+        if (newPage + 1 > state.nbPages) {
+          newPage = 0;
         }
+
+        return { ...state, page: newPage };
+        
+      } else if (action.payload === "dec") {
+        let newPage = state.page - 1;
+        if (newPage < state.nbPage) {
+          newPage = state.nbPage - 1;
+        }
+
+        return { ...state, page: newPage };
+      }
     default:
       throw new Error(`No Matches ${action.type} action type`);
   }

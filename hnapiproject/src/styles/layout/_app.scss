@@ -18,32 +18,32 @@ main {
     flex-direction: column;
 }
 
-.container {
-    width: 50vw;
-    margin: 5rem 0;
-    background: $secondary-9;
-    border-radius: $radius;
-    padding: 1.5rem 2rem;
-    box-shadow: $dark-shadow;
-    position: absolute;
-    h2 {
-        font-weight: 600;
-        text-transform: none;
-        font-size: 2rem;
-        float: left;
-        color: white
-    }
-    // }
-    .buttons {
-        @include flex-center;
-    }
-}
+// .container {
+//     width: 50vw;
+//     margin: 5rem 0;
+//     background: $secondary-9;
+//     border-radius: $radius;
+//     padding: 1.5rem 2rem;
+//     box-shadow: $dark-shadow;
+//     position: absolute;
+//     h2 {
+//         font-weight: 600;
+//         text-transform: none;
+//         font-size: 2rem;
+//         float: left;
+//         color: white
+//     }
+//     // }
+//     .buttons {
+//         @include flex-center;
+//     }
+// }
 
-section {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: $max-width;
-}
+// section {
+//     width: 90vw;
+//     margin: 0 auto;
+//     max-width: $max-width;
+// }
 
 @include large {
     .section {

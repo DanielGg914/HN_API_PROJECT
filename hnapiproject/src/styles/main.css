@@ -182,34 +182,6 @@ main {
   flex-direction: column;
 }
 
-.container {
-  width: 50vw;
-  margin: 5rem 0;
-  background: #d55896;
-  border-radius: 0.25rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  position: absolute;
-}
-.container h2 {
-  font-weight: 600;
-  text-transform: none;
-  font-size: 2rem;
-  float: left;
-  color: white;
-}
-.container .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
 @media only screen and (min-width: 1024px) {
   .section {
     width: 95vw;
@@ -276,19 +248,25 @@ ul {
   }
 }
 .search-form {
+  z-index: 3;
   width: 100%;
   padding: 1%;
   position: fixed;
   top: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   background-color: #4a5354;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.search-form h2 {
+.search-form .search {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.search-form .search h2 {
   text-align: center;
   margin: auto;
   font-weight: bold;
 }
-.search-form .form-input {
+.search-form .search .form-input {
   padding: 0.1rem 1rem;
   border-bottom: 5px solid #e495bd;
   width: 25rem;
@@ -297,8 +275,47 @@ ul {
   margin-right: auto;
   outline: none;
 }
+.search-form .info {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-form .info h3 {
+  color: #eee;
+  left: 0;
+  right: 0;
+  display: inline-block;
+}
+.search-form .info .prev-page {
+  background-color: #da6ca3;
+  display: inline-block;
+}
+.search-form .info .next-page {
+  background-color: #e495bd;
+  display: inline-block;
+  padding: 0.7rem;
+  border-radius: 20%;
+}
 
-h1 {
-  margin-top: 20rem;
-  height: 100rem;
+.main {
+  margin: 1rem;
+  width: 90vw;
+  max-width: 1600px;
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0 5rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.main .container {
+  background-color: #4a5354;
+  width: 100%;
+  margin-top: 103px;
+}
+.main .container .heading {
+  border: #e495bd 1px solid;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
