@@ -289,14 +289,18 @@ ul {
   display: inline-block;
 }
 .search-form .info .prev-page {
-  background-color: #da6ca3;
+  background-color: #e495bd;
   display: inline-block;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
 }
 .search-form .info .next-page {
   background-color: #e495bd;
   display: inline-block;
-  padding: 0.7rem;
-  border-radius: 20%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
 }
 
 .main {
@@ -312,10 +316,35 @@ ul {
   background-color: #4a5354;
   width: 100%;
   margin-top: 103px;
+  display: block;
+  align-items: center;
 }
 .main .container .heading {
-  border: #e495bd 1px solid;
+  font-size: 0.5rem;
+  background-color: #e495bd;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  height: 10rem;
+  width: 90%;
+  border-radius: 5px;
+}
+.main .container .heading p {
+  margin: 0;
+  font-size: 1rem;
+  float: left;
+  margin-left: 0;
+}
+.main .container .heading a {
+  margin: 0;
+  font-size: 1rem;
+  margin-left: 0;
+  color: #eee;
+  margin-left: 10px;
+}
+.main .container .heading .remove-btn {
+  background-color: #df81b0;
+  font-size: 1rem;
+  float: right;
+  margin-right: 0;
 }/*# sourceMappingURL=main.css.map */

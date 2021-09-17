@@ -14,15 +14,39 @@
     background-color: $primary-2;
     width: 100%;
     margin-top: 103px;
-
-    
+    display: block;
+    align-items: center;
 
     //individual news heading
     .heading {
-      border: $secondary-6 1px solid;
+      font-size: .5rem;
+      background-color: $secondary-6;
       margin: 0 auto;
       overflow: hidden;
       position: relative;
+      height: 10rem;
+      width: 90%;
+      border-radius: 5px;
+      p {
+        margin: 0;
+        font-size: 1rem;
+        float: left;
+        margin-left: 0;
+      }
+      a {
+        margin: 0;
+        font-size: 1rem;
+        margin-left: 0;
+        color: $white;
+        margin-left: 10px;
+      }
+      .remove-btn{
+        background-color: $secondary-7;
+        font-size: 1rem;
+        float: right;
+    
+        margin-right: 0;
+      }
     }
   }
 }

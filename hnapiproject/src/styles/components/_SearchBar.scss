@@ -45,16 +45,20 @@
       display: inline-block;
     }
     .prev-page {
-      background-color: $secondary-8;
+      background-color: $secondary-6;
       display: inline-block;
+      padding: .5rem;
+      border-radius: 1rem;
+      margin-right: 1rem;
 
     }
 
     .next-page {
       background-color: $secondary-6;
       display: inline-block;
-      padding: .7rem;
-      border-radius: 20%;
+      padding: .5rem;
+      border-radius: 1rem;
+      margin-left: 1rem;
     }
   }
 }

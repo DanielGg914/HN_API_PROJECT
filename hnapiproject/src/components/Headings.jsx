@@ -23,11 +23,13 @@ const Headings = () => {
         return (
           <div key={id} className="container">
             <div className="heading">
-              <h1>{title}</h1>
-              <a href={url} target="_blank" rel='noopener noreferrer'></a>
-              <p>{text}</p>
-              <p>{points} Points</p>
-              <p>{num_comments} Comments</p>
+              <h3>{title}</h3>
+              <a href={url} target="_blank" rel="noopener noreferrer">Read More</a>
+              <p>
+                {text}
+                {points} Points
+                {num_comments} Comments
+              </p>
               <p> Written By{author}</p>
 
               <button className="remove-btn" onCLick={() => removeStory(id)}>
